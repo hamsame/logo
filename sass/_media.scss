@@ -1,0 +1,34 @@
+@media (max-width: 768px), (max-width: 425px), (max-width: 375px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero,
+  #covid-info {
+    font-size: 0.8rem;
+  }
+
+  #why-us > .container > .info {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+@media (max-width: 425px) {
+  #why-us > .container > .info {
+    grid-template-columns: 1fr;
+  }
+  .information div p {
+    width: 90%;
+  }
+}
+@media (min-width: 320px) and( max-width: 375px) {
+  #why-us > .container > .info {
+    grid-template-columns: 1fr;
+  }
+  .information div p {
+    width: 60%;
+  }
+}

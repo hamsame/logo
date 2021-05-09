@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+%flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+%cartItem {
+  margin: 2vh 0;
+  padding: 0.5rem 1rem;
+  background-color: #ef5350;
+  color: white;
+  border-radius: 12px;
+}
+
+header nav {
+  min-width: 100%;
+  background: linear-gradient(to right, #ef5350, #f44336);
+  padding: 1.4rem;
+  position: fixed;
+  z-index: 3;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  @extend %flex;
+  justify-content: space-between;
+  ul li {
+    display: inline-block;
+    margin: 0 0.5rem;
+    a {
+      color: white;
+    }
+  }
+}
+
+.brand-logo {
+  color: white;
+  font-size: 1.5rem;
+}
+
+%hero {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+}
+
+#why-us {
+  margin: 5vh 0;
+  i {
+    color: #e53935;
+  }
+  & > .container {
+    display: block;
+
+    .info {
+      margin: 3vh 0;
+      @extend %grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 2rem;
+      .info-box * {
+        margin: 2vh 0;
+      }
+      h4 {
+        font-weight: bold;
+      }
+      p {
+        font-size: 0.85rem;
+      }
+    }
+  }
+}
+
+.center-text {
+  text-align: center;
+  line-height: 2.2rem;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.hero {
+  @extend %hero;
+  h1 {
+    width: 60%;
+  }
+}
+
+.hero.home-bg {
+  background: url('../images/traveller.jpeg') no-repeat center center/cover;
+  background-color: #222;
+}
+.hero.about-bg {
+  background: url('../images/mountain.jpeg') no-repeat center center/cover;
+  background-color: #222;
+}
+.hero.donate-bg {
+  background: url('../images/friends2.jpeg') no-repeat center center/cover;
+  background-color: #222;
+}
+.hero.contact-bg {
+  background: url('../images/phonecall.jpeg') no-repeat center center/cover;
+  background-color: #222;
+}
+
+.hero:after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 70vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  width: 80%;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 2;
+  line-height: 2.2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+  align-items: flex-start;
+  @extend %flex;
+  flex-direction: column;
+}
+
+.btn-primary {
+  background: transparent;
+  color: white;
+  border: white 1px solid;
+  padding: 0 1rem;
+  border-radius: 9px;
+  transition: all 0.4s ease-in-out;
+  &:hover {
+    background: white;
+    color: #222;
+  }
+}
+
+#support > .container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.grid {
+  margin: 5% auto;
+  width: 100%;
+  background-color: red;
+  @extend %grid;
+}
+
+#cards > .container {
+  @extend %grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5rem;
+  h2 {
+    text-align: center;
+  }
+}
+
+#support {
+  @extend %grid;
+  width: 80%;
+  margin: 5% auto;
+}
+
+.card {
+  background: #222;
+  color: white;
+  padding: 0.5rem;
+  height: 30vh;
+  border-radius: 8px;
+
+  p {
+    margin: 2vh 0 2rem 0;
+    font-size: 1.2rem;
+  }
+}
+
+#covid-info {
+  margin: 10vh 0;
+  position: relative;
+  background: url('../images/forest-pic.jpeg') no-repeat center center/cover;
+  height: 50vh;
+}
+
+#covid-info:after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(192, 192, 192, 0.4),
+    rgba(128, 128, 128, 0.2)
+  );
+}
+
+#covid-info > .covid-info-content {
+  position: absolute;
+  @extend %flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 90%;
+  margin: 0 1.5rem;
+  z-index: 2;
+  height: 70%;
+  line-height: 2rem;
+  color: white;
+
+  a {
+    background: white;
+    color: #222;
+  }
+}
+
+#owners .container {
+  gap: 3rem;
+}
+
+#products > .container {
+  display: block;
+  width: 92%;
+  margin: 0 auto;
+}
+
+#products .flex-items {
+  @extend %grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  .flex-item {
+    text-align: center;
+    position: relative;
+    img {
+      width: 95%;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+  }
+  a {
+    @extend %cartItem;
+  }
+}
+
+.cartItem {
+  @extend %cartItem;
+}
+
+#sale {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 7;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  background-color: red;
+  color: white;
+}
+
+.price {
+  margin: 2.5vh 0;
+  text-align: center;
+}
+
+.sale-price {
+  color: red;
+  text-decoration: line-through;
+  font-weight: bold;
+}
+
+.product-div {
+  text-align: center;
+  margin: 10vh 0;
+}
+
+#merch {
+  img {
+    cursor: pointer;
+  }
+  h2 {
+    text-align: center;
+    padding: 15vh 0 0;
+  }
+
+  .container {
+    padding: 15vh 0 5vh;
+    width: 90%;
+    @extend %grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    text-align: center;
+    img {
+      width: 75%;
+      border-radius: 12px;
+    }
+    div {
+      position: relative;
+      .sale {
+        position: absolute;
+        top: 2vh;
+        right: 12vw;
+        z-index: 7;
+        border-radius: 12px;
+        padding: 0.5rem 1rem;
+        background-color: red;
+        color: white;
+      }
+    }
+  }
+}
+
+#donate {
+  text-align: center;
+  padding: 2rem 0;
+  ul li {
+    margin: 4vh 0;
+    div {
+      width: 30%;
+      margin: 0 auto;
+      border-radius: 12px;
+      background: linear-gradient(to right, #e53935, #ef5350);
+      padding: 1rem 0;
+      color: #fff;
+      cursor: pointer;
+      transition: background, linear-gradient 0.4s ease-in-out;
+      &:hover {
+        background: #222;
+      }
+    }
+  }
+}
+
+#contact > .container {
+  padding: 3rem 0;
+  div {
+    margin: 0 5%;
+    line-height: 2.6rem;
+  }
+}
+
+#contact-form > .container {
+  display: grid;
+  margin: 10vh auto 5rem;
+  line-height: 2;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  label,
+  input {
+    display: block;
+    margin-bottom: 1vh;
+  }
+  input,
+  textarea {
+    width: 80%;
+    padding: 8px 6px 2px;
+  }
+  input[type='submit'] {
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 0;
+  }
+  textarea {
+    resize: vertical;
+  }
+}
+
+footer {
+  background: #222;
+  color: white;
+  padding: 2rem 0;
+  .container {
+    @extend %grid;
+    span {
+      a {
+        color: inherit;
+        margin: 0 2%;
+      }
+    }
+  }
+  p {
+    margin: 5vh 0 0;
+    text-align: center;
+  }
+}
+
+.information {
+  width: 90%;
+  margin: 9vh auto;
+  @extend %grid;
+  gap: 3rem;
+}
+
+@media (max-width: 1000px) {
+  #products .flex-items {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  #support,
+  #cards > .container,
+  #products .flex-items,
+  #merch > .container,
+  #contact-form > .container,
+  .information {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    div {
+      width: 100%;
+      p {
+        width: 70%;
+      }
+    }
+  }
+
+  #contact-form > .container {
+    padding: 1rem 0;
+    #form {
+      grid-row: 2;
+      margin: 5vh 0 0;
+    }
+  }
+
+  #contact > .container {
+    display: block;
+    div {
+      margin: 5vh auto;
+    }
+  }
+
+  #merch > .container {
+    margin: 0 auto;
+  }
+
+  #covid-info > .covid-info-content {
+    align-items: flex-start;
+    a {
+      margin-top: 2vh;
+    }
+  }
+
+  .brand-logo {
+    margin: 0 auto;
+  }
+
+  nav ul {
+    display: none;
+  }
+}
+
+@import '_media.scss';
