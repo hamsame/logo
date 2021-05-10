@@ -34,7 +34,7 @@ header nav {
   background: linear-gradient(to right, #ef5350, #f44336);
   padding: 1.4rem;
   position: fixed;
-  z-index: 3;
+  z-index: 4;
 }
 
 .container {
@@ -271,7 +271,7 @@ header nav {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  z-index: 7;
+  z-index: 3;
   border-radius: 12px;
   padding: 0.5rem 1rem;
   background-color: red;
@@ -320,7 +320,7 @@ header nav {
         position: absolute;
         top: 2vh;
         right: 12vw;
-        z-index: 7;
+        z-index: 3;
         border-radius: 12px;
         padding: 0.5rem 1rem;
         background-color: red;
