@@ -131,21 +131,29 @@ header nav .container .nav-links li a {
 
 .hero.home-bg {
   background: url("../images/traveller.jpeg") no-repeat center center/cover;
+  background-attachment: fixed;
   background-color: #222;
 }
 
 .hero.about-bg {
   background: url("../images/mountain.jpeg") no-repeat center center/cover;
+  background-attachment: fixed;
   background-color: #222;
 }
 
 .hero.donate-bg {
   background: url("../images/friends2.jpeg") no-repeat center center/cover;
+  background-attachment: fixed;
   background-color: #222;
+}
+
+.donate-bg > .hero-content {
+  top: 2.5rem;
 }
 
 .hero.contact-bg {
   background: url("../images/phonecall.jpeg") no-repeat center center/cover;
+  background-attachment: fixed;
   background-color: #222;
 }
 
@@ -302,8 +310,8 @@ header nav .container .nav-links li a {
 
 #sale {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 15px;
+  right: 15px;
   z-index: 3;
   border-radius: 12px;
   padding: 0.5rem 1rem;
@@ -393,10 +401,12 @@ header nav .container .nav-links li a {
 
 #contact > .container {
   padding: 3rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 #contact > .container div {
-  margin: 0 5%;
   line-height: 2.6rem;
 }
 
@@ -419,13 +429,16 @@ header nav .container .nav-links li a {
 #contact-form > .container input,
 #contact-form > .container textarea {
   width: 80%;
-  padding: 8px 6px 2px;
+  padding: 8px;
 }
 
 #contact-form > .container input[type='submit'] {
   border: none;
   cursor: pointer;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 #contact-form > .container textarea {

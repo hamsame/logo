@@ -115,18 +115,29 @@ header nav {
 
 .hero.home-bg {
   background: url('../images/traveller.jpeg') no-repeat center center/cover;
+  background-attachment: fixed;
   background-color: #222;
 }
 .hero.about-bg {
   background: url('../images/mountain.jpeg') no-repeat center center/cover;
+  background-attachment: fixed;
   background-color: #222;
 }
 .hero.donate-bg {
   background: url('../images/friends2.jpeg') no-repeat center center/cover;
+  background-attachment: fixed;
   background-color: #222;
 }
+
+.donate-bg {
+  & > .hero-content {
+    top: 2.5rem;
+  }
+}
+
 .hero.contact-bg {
   background: url('../images/phonecall.jpeg') no-repeat center center/cover;
+  background-attachment: fixed;
   background-color: #222;
 }
 
@@ -280,8 +291,8 @@ header nav {
 
 #sale {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 15px;
+  right: 15px;
   z-index: 3;
   border-radius: 12px;
   padding: 0.5rem 1rem;
@@ -365,8 +376,9 @@ header nav {
 
 #contact > .container {
   padding: 3rem 0;
+  display: flex;
   div {
-    margin: 0 5%;
+    // margin: 0 5%;
     line-height: 2.6rem;
   }
 }
@@ -385,12 +397,15 @@ header nav {
   input,
   textarea {
     width: 80%;
-    padding: 8px 6px 2px;
+    padding: 8px;
   }
   input[type='submit'] {
     border: none;
     cursor: pointer;
-    padding: 0.5rem 0;
+    padding: 1rem 0;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
   }
   textarea {
     resize: vertical;
