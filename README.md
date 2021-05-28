@@ -12,4 +12,4 @@ To improve this project I could:
 
 
  # link:
- https://hamsame.github.io/portfolio-project/
+ https://hamsame.github.io/logo/
